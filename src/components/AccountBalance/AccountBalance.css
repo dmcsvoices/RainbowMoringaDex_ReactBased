@@ -1,0 +1,8 @@
+.balance-section {
+    border: 1px solid #cccccc;
+    width: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
