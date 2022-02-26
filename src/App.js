@@ -1,32 +1,55 @@
+import React, { Component } from 'react';
 import './App.css';
-import Coin from './components/Coin/Coin';
+import CoinList from './components/CoinList/CoinList';
+import Header from './components/Header/Header';
 import AccountBalance from './components/AccountBalance/AccountBalance'
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">Rainbow Moringa Dex</h1>
-      </header>
-      <AccountBalance amount={10000} />
-      <table className="coin-table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Ticker</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <Coin name="Bitcoin" ticker="BTC" price={34000.99} />
-        <Coin name="Ethereum" ticker="ETH" price={2599} />
-        <Coin name="Cardano" ticker="ADA" price={0.85} />
-        <Coin name="Ripple" ticker="XRP" price={1.85} />
-      </tbody>
-    </table>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      balance: 10000,
+      coinData: [
+        {
+          name: 'Bitcoin',
+          ticker: 'BTC',
+          price: 34000.00
+        },
+        {
+          name: 'Ethereum',
+          ticker: 'ETH',
+          price: 3200.00
+        },
+        {
+          name: 'Cardano',
+          ticker: 'ADA',
+          price: 0.90
+        },
+        {
+          name: 'Solana',
+          ticker: 'SOL',
+          price: 27.00
+        }
+      ]
+    }
+  }
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <AccountBalance amount={this.state.balance} />
+        <CoinList coinData={this.state.coinData} />
+      
+      <div>
+          <iframe width="396" height="441" src="https://cybermap.kaspersky.com/en/widget/dynamic/dark" frameborder="0"></iframe>
+      </div>
+  
+      </div>
+    );
+  }
+
+ 
 }
 
 export default App;
