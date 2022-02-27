@@ -50,6 +50,7 @@ export default class Coin extends Component {
             <TableD>{this.props.name}</TableD>
             <TableD>{this.props.ticker}</TableD>
             <TableD>${this.props.price}</TableD>
+            <TableD>${this.props.balance}</TableD>
             <TableD>
                 <form action="#" method="POST">
                 <Button onClick={this.handleClick}>Refresh </Button>

@@ -10,30 +10,36 @@ class App extends React.Component {
     super(props);
     this.state = {
       balance: 10000,
+      showBalanceEnabled: false,
       coinData: [
         {
           name: 'Bitcoin',
           ticker: 'BTC',
+          balance: 0.005,
           price: 34000.00
         },
         {
           name: 'Ethereum',
           ticker: 'ETH',
+          balance: 0.5,
           price: 3200.00
         },
         {
           name: 'Cardano',
           ticker: 'ADA',
+          balance: 3500,
           price: 0.90
         },
         {
           name: 'Solana',
           ticker: 'SOL',
+          balance: 2455,
           price: 27.00
         }
       ]
     }
     this.handleRefresh = this.handleRefresh.bind(this);
+    this.handleBalanceEnable = this.handleBalanceEnable.bind(this);
   }
   handleRefresh(valueChangeTicker){
     const newCoinData = this.state.coinData.map( function({ticker, name, price}) {
@@ -46,12 +52,17 @@ class App extends React.Component {
     });
     this.setState({ coinData: newCoinData})
   }
+
+  handleBalanceEnable(valueEnabled){
+    this.setState({ showBalanceEnabled: !valueEnabled})
+  }
+
   render() {
     return (
       <div className="App">
-        <Header />
-        <AccountBalance amount={this.state.balance} />
-        <CoinList coinData={this.state.coinData} handleRefresh={this.handleRefresh} />
+        <Header showBalance={this.state.showBalanceEnabled} />
+        <AccountBalance amount={this.state.balance} showBalance={this.state.showBalanceEnabled} handleBalanceEnable={this.handleBalanceEnable} />
+        <CoinList coinData={this.state.coinData} showBalance={this.state.showBalanceEnabled} handleRefresh={this.handleRefresh} />
       
       <div>
           <iframe width="396" height="441" src="https://cybermap.kaspersky.com/en/widget/dynamic/dark" frameborder="0"></iframe>
