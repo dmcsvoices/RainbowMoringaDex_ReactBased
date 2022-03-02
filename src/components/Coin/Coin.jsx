@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -22,34 +22,34 @@ const Button = styled.button`
     border-radius: 25px;
 `;
 
-export default class Coin extends Component {
+export default function Coin(props) {
 
     
-    handleClick = (event) => {
+    const handleClick = (event) => {
         //prevent default action of submittin gthe form
         event.preventDefault();
 
         
-        this.props.handleRefresh(this.props.tickerId);
+        props.handleRefresh(props.tickerId);
 
     }
     
-    render() {
+    
     return (
         <TableR className="coin-row">
-            <TableD>{this.props.name}</TableD>
-            <TableD>{this.props.ticker}</TableD>
-            <TableD>${this.props.price}</TableD>
-            <TableD>${this.props.balance}</TableD>
+            <TableD>{props.name}</TableD>
+            <TableD>{props.ticker}</TableD>
+            <TableD>${props.price}</TableD>
+            <TableD>${props.balance}</TableD>
             <TableD>
                 <form action="#" method="POST">
-                <Button onClick={this.handleClick}>Refresh </Button>
+                <Button onClick={handleClick}>Refresh </Button>
                 </form>
 
             </TableD>
       </TableR>
     );
-  }
+  
 }
 
 Coin.propTypes = {
