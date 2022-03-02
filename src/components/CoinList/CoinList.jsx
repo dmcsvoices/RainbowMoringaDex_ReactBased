@@ -12,23 +12,25 @@ export default class CoinList extends Component {
     console.log("in Coinlist, showbalance:",this.props.showBalance)
     content = (this.props.showBalance) ? 
          
-          this.props.coinData.map( ({name, ticker, price, balance}) => 
-            <Coin key={ticker} 
+          this.props.coinData.map( ({key,name, ticker, price, balance}) => 
+            <Coin key={key} 
                   handleRefresh={this.props.handleRefresh} 
                   name={name} 
                   ticker={ticker}
                   balance={balance} 
-                  price={price} />
+                  price={price}
+                  tickerId={key} />
           )
          :
         
-          this.props.coinData.map( ({name, ticker, price, balance}) => 
-          <Coin key={ticker} 
+          this.props.coinData.map( ({key, name, ticker, price, balance}) => 
+          <Coin key={key} 
                 handleRefresh={this.props.handleRefresh} 
                 name={name} 
                 ticker={ticker}
                 balance={"hidden"} 
-                price={price} />
+                price={price}
+                tickerId={key} />
         );
     
 
