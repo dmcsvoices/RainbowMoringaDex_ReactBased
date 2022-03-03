@@ -18,13 +18,13 @@ const Button = styled.button`
     font-size: 1em;
     margin: 1em;
     padding: 0.25em 1em;
-    border: 2px solid palevioletred;
-    border-radius: 25px;
+    //border: 2px solid palevioletred;
+    //border-radius: 25px;
 `;
 
 export default function Coin(props) {
 
-    
+    const buttonClass = 'btn btn-info';
     const handleClick = (event) => {
         //prevent default action of submittin gthe form
         event.preventDefault();
@@ -43,7 +43,9 @@ export default function Coin(props) {
             <TableD>${props.balance}</TableD>
             <TableD>
                 <form action="#" method="POST">
-                <Button onClick={handleClick}>Refresh </Button>
+                <button 
+                    onClick={handleClick}
+                    className={buttonClass}>Refresh </button>
                 </form>
 
             </TableD>

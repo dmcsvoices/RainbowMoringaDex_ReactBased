@@ -4,6 +4,9 @@ import CoinList from './components/CoinList/CoinList';
 import Header from './components/Header/Header';
 import AccountBalance from './components/AccountBalance/AccountBalance'
 import axios from 'axios';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootswatch/dist/minty/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/js/all';
 
 const COIN_COUNT = 10;
 const formatPrice = price =>  parseFloat(Number(price).toFixed(4));
