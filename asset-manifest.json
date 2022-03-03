@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/RainbowMoringaDex_ReactBased/static/css/main.5576390c.css",
-    "main.js": "/RainbowMoringaDex_ReactBased/static/js/main.9c6d78e2.js",
+    "main.css": "/RainbowMoringaDex_ReactBased/static/css/main.54aaaa5f.css",
+    "main.js": "/RainbowMoringaDex_ReactBased/static/js/main.172b4c17.js",
     "static/js/787.5eeded1b.chunk.js": "/RainbowMoringaDex_ReactBased/static/js/787.5eeded1b.chunk.js",
     "index.html": "/RainbowMoringaDex_ReactBased/index.html",
-    "main.5576390c.css.map": "/RainbowMoringaDex_ReactBased/static/css/main.5576390c.css.map",
-    "main.9c6d78e2.js.map": "/RainbowMoringaDex_ReactBased/static/js/main.9c6d78e2.js.map",
+    "main.54aaaa5f.css.map": "/RainbowMoringaDex_ReactBased/static/css/main.54aaaa5f.css.map",
+    "main.172b4c17.js.map": "/RainbowMoringaDex_ReactBased/static/js/main.172b4c17.js.map",
     "787.5eeded1b.chunk.js.map": "/RainbowMoringaDex_ReactBased/static/js/787.5eeded1b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5576390c.css",
-    "static/js/main.9c6d78e2.js"
+    "static/css/main.54aaaa5f.css",
+    "static/js/main.172b4c17.js"
   ]
 }
